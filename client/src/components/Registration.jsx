@@ -44,7 +44,8 @@ const Registration = () => {
     const errors = validateForm();
     if (Object.keys(errors).length === 0) {
       try {
-        const SERVER_URI = "http://localhost:3000";
+        // const SERVER_URI = "http://localhost:3000";
+        const SERVER_URI = "https://workshop-gema.onrender.com";
         const res = await axios.post(`${SERVER_URI}/api/enquiry`, { name: formData.fullName, email: formData.email, phone: formData.phone });
         console.log(res.data.message);
         setIsSubmitted(true);
